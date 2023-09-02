@@ -7,7 +7,6 @@ import androidx.room.RoomDatabase
 import com.example.einkaufsliste.data.datamodels.Artikel
 
 @Database(entities = [Artikel::class], version = 1)
-
 abstract class ArtikelDatabase: RoomDatabase() {
 
     abstract val artikelDao: ArtikelDao
