@@ -37,4 +37,12 @@ class Repository(private val database: ArtikelDatabase) {
         database.artikelDao.insertArtikel(ArtikelExample.artikel1)
     }
 
+    //delete by id
+
+    fun deleteById(id: Int){
+        database.artikelDao.deleteById(id)
+    }
+
+
+
 }

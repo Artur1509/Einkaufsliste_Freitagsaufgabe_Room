@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFDFD"
-    android:backgroundTint="#FFFFFF"
+    android:background="#FFFFFF"
+    android:backgroundTint="#CBFAF5"
+    tools:background="#FFFFFF"
     tools:context=".ui.MainFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,5 +57,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleCL" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/artikelRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleCL"
+        tools:listitem="@layout/list_item"
+
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,4 +26,7 @@ interface ArtikelDao {
     //Anzahl der Artikel wiedergeben
     @Query("SELECT COUNT(*) FROM artikel_table")
     fun getArtikelCount(): Int
+
+    @Query("DELETE FROM artikel_table WHERE id = :id ")
+    fun deleteById(id: Int)
 }
