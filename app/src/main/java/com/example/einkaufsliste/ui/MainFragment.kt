@@ -53,13 +53,18 @@ class MainFragment : Fragment() {
         // Artikel einfügen
         binding.artikelAddBTN.setOnClickListener {
 
-            var artikelName = binding.inputET.text.toString()
+            if(binding.inputET.editableText.isEmpty()){
 
-            var artikel = Artikel(name = artikelName)
+            }
+            else{
+                var artikelName = binding.inputET.text.toString()
 
-            viewModel.addArtikel(artikel)
+                var artikel = Artikel(name = artikelName)
 
-            binding.inputET.setText("")
+                viewModel.addArtikel(artikel)
+
+                binding.inputET.setText("")
+            }
         }
 
 
