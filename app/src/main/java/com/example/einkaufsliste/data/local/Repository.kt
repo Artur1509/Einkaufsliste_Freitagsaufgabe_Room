@@ -3,7 +3,6 @@ package com.example.einkaufsliste.data.local
 import android.util.Log
 import androidx.lifecycle.LiveData
 import com.example.einkaufsliste.data.datamodels.Artikel
-import com.example.einkaufsliste.data.example.ArtikelExample
 
 class Repository(private val database: ArtikelDatabase) {
 
@@ -33,12 +32,7 @@ class Repository(private val database: ArtikelDatabase) {
         return database.artikelDao.getArtikelCount()
     }
 
-    suspend fun prepopulateDB(){
-        database.artikelDao.insertArtikel(ArtikelExample.artikel1)
-    }
-
     //delete by id
-
     fun deleteById(id: Int){
         database.artikelDao.deleteById(id)
     }

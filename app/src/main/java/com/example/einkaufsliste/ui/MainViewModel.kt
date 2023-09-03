@@ -25,9 +25,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     //delete by id
-
     fun deleteById(id: Int){
         repository.deleteById(id)
+    }
+
+    // neuen Artikel einfügen
+    fun addArtikel(artikel: Artikel){
+        viewModelScope.launch{
+            repository.insertArtikel(artikel)
+        }
     }
 
 
